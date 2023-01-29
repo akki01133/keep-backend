@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "google keep user auth practice",
   "main": "backend/server.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "start": "nodemon start"
+    "start": "node ./backend/server.js"
   },
   "author": "ajeet kumar",
   "license": "ISC",
@@ -18,8 +21,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.20",
-    "passport-jwt": "^4.0.1"
+    "nodemon": "^2.0.20"
   },
   "type": "module"
 }
