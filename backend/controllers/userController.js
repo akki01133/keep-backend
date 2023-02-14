@@ -13,7 +13,7 @@ export const getProfile = asyncHandler(async (req,res,next)=>{
 export const upload = multer({
     storage: multer.diskStorage({
         destination: function(req,file,cb){
-            cb(null, "uploads/images")
+            cb(null, "/tmp")
         },
         filename:function(req,file,cb){
             cb(null,req.user._id+'_pic');
