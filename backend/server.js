@@ -15,8 +15,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 dotenv.config();
-
-connnectToDb();
+const PORT = process.env.PORT || 5000;
+connnectToDb(
+    ()=>app.listen(5000,()=>console.log(`listening on ${PORT}`))
+    );
 
 var dir = process.cwd()+CONFIG.MULTER_MEDIA_DESTINATION;
 
@@ -35,5 +37,3 @@ app.use('/user',protect,userRoutes )
 
 app.use(notFound);
 app.use(errorHandler);
-const PORT = process.env.PORT || 5000;
-app.listen(5000,()=>console.log(`listening on ${PORT}`));

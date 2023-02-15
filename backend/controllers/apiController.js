@@ -34,8 +34,8 @@ const getNoteById = expressAsyncHandler(async (req, res) =>{
 
 const updateNote = expressAsyncHandler(async (req, res) =>{
     const {id} = req.params;
-    const {title,content,color} = req.body;
-    const note = await Note.findOneAndUpdate({_id: id, user: req.user._id},{title,color,content},{returnOriginal:false} );
+    const {title,content,color, updatedAt} = req.body;
+    const note = await Note.findOneAndUpdate({_id: id, user: req.user._id},{title,color,content,updatedAt},{returnOriginal:false} );
     if(note){
         res.json(note);
     }else{

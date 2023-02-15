@@ -17,8 +17,16 @@ const notesSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "User"
+    },
+    createdAt:{
+        type:Date,
+        default:() =>new Date().toISOString()
+    },
+    updatedAt:{
+        type:Date,
+        default:() => new Date().toISOString()
     }
-},{timestamps: true});
+});
 
 // Duplicate the ID field.
 notesSchema.virtual('id').get(function(){
