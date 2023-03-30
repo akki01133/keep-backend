@@ -26,5 +26,5 @@ deployed using [Vercel](https://vercel.com/) at [keep-backend](https://keep-back
     - patch /notes/:id
 
 ```
-💡 documented with 💖 by Ajeet | kr and Snoodify Team
+💡 documented with 💖 by Ajeet | kr 
 ```
